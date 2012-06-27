@@ -184,3 +184,156 @@ Stack trace:
 REQUEST_URI=/niceapns/index.php?r=project/create
 in /Users/dodywicaksono/lab/niceapns/protected/controllers/ProjectController.php (77)
 in /Users/dodywicaksono/lab/niceapns/index.php (13)
+2012/06/27 08:56:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/dodywicaksono/lab/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/dodywicaksono/lab/yii/framework/web/CController.php(271): CController->missingAction('index')
+#1 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(276): CController->run('index')
+#2 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/index')
+#3 /Users/dodywicaksono/lab/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/dodywicaksono/lab/niceapns/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/niceapns/index.php?r=api/index
+---
+2012/06/27 09:28:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create1".' in /Users/dodywicaksono/lab/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Users/dodywicaksono/lab/yii/framework/web/CController.php(271): CController->missingAction('create1')
+#1 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(276): CController->run('create1')
+#2 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/create1')
+#3 /Users/dodywicaksono/lab/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/dodywicaksono/lab/niceapns/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/niceapns/index.php?r=api/create1
+---
+2012/06/27 09:30:57 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php:25) (/Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php:74)
+Stack trace:
+#0 /Users/dodywicaksono/lab/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionCreate()
+#1 /Users/dodywicaksono/lab/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/dodywicaksono/lab/yii/framework/web/CController.php(287): ApiController->runAction()
+#3 /Users/dodywicaksono/lab/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#4 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#5 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/dodywicaksono/lab/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/dodywicaksono/lab/niceapns/index.php(13): CWebApplication->run()
+REQUEST_URI=/niceapns/index.php?r=api/create
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (74)
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (35)
+in /Users/dodywicaksono/lab/niceapns/index.php (13)
+2012/06/27 09:31:41 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php:25) (/Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php:74)
+Stack trace:
+#0 /Users/dodywicaksono/lab/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionCreate()
+#1 /Users/dodywicaksono/lab/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/dodywicaksono/lab/yii/framework/web/CController.php(287): ApiController->runAction()
+#3 /Users/dodywicaksono/lab/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#4 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#5 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/dodywicaksono/lab/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/dodywicaksono/lab/niceapns/index.php(13): CWebApplication->run()
+REQUEST_URI=/niceapns/index.php?r=api/create&model=tokens
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (74)
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (66)
+in /Users/dodywicaksono/lab/niceapns/index.php (13)
+2012/06/27 09:59:41 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'field list'. The SQL statement executed was: select project_id from project where app_id = '123' and secret_key = '456'.
+in /Users/dodywicaksono/lab/niceapns/protected/models/Project.php (148)
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (40)
+in /Users/dodywicaksono/lab/niceapns/index.php (13)
+2012/06/27 09:59:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'project_id' in 'field list'. The SQL statement executed was: select project_id from project where app_id = '123' and secret_key = '456'' in /Users/dodywicaksono/lab/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Users/dodywicaksono/lab/yii/framework/db/CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /Users/dodywicaksono/lab/yii/framework/db/ar/CActiveRecord.php(1498): CDbCommand->queryRow()
+#2 /Users/dodywicaksono/lab/niceapns/protected/models/Project.php(148): CActiveRecord->findBySql('select project_...')
+#3 /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php(40): Project->retrieveProjectId('123', '456')
+#4 /Users/dodywicaksono/lab/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionCreate()
+#5 /Users/dodywicaksono/lab/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Users/dodywicaksono/lab/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Users/dodywicaksono/lab/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(276): CController->run('create')
+#9 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('api/create')
+#10 /Users/dodywicaksono/lab/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/dodywicaksono/lab/niceapns/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/niceapns/index.php?r=api/create&model=tokens&app_id=123&secret_key=456&token=123485958
+---
+2012/06/27 10:23:09 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php:41) (/Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php:87)
+Stack trace:
+#0 /Users/dodywicaksono/lab/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionCreate()
+#1 /Users/dodywicaksono/lab/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/dodywicaksono/lab/yii/framework/web/CController.php(287): ApiController->runAction()
+#3 /Users/dodywicaksono/lab/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#4 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#5 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/dodywicaksono/lab/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/dodywicaksono/lab/niceapns/index.php(13): CWebApplication->run()
+REQUEST_URI=/niceapns/index.php?r=api/create&model=tokens&app_id=be13f88376&secret_key=4ed89c97e4&token=123485958
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (87)
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (65)
+in /Users/dodywicaksono/lab/niceapns/index.php (13)
+2012/06/27 11:07:36 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/dodywicaksono/lab/niceapns/protected/models/Token.php:92) (/Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php:93)
+Stack trace:
+#0 /Users/dodywicaksono/lab/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionCreate()
+#1 /Users/dodywicaksono/lab/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/dodywicaksono/lab/yii/framework/web/CController.php(287): ApiController->runAction()
+#3 /Users/dodywicaksono/lab/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#4 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#5 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/dodywicaksono/lab/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/dodywicaksono/lab/niceapns/index.php(13): CWebApplication->run()
+REQUEST_URI=/niceapns/index.php?r=api/create&model=tokens&app_id=be13f88376&secret_key=4ed89c97e4&token=1234859158x
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (93)
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (71)
+in /Users/dodywicaksono/lab/niceapns/index.php (13)
+2012/06/27 11:07:51 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/dodywicaksono/lab/niceapns/protected/models/Token.php:92) (/Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php:93)
+Stack trace:
+#0 /Users/dodywicaksono/lab/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionCreate()
+#1 /Users/dodywicaksono/lab/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/dodywicaksono/lab/yii/framework/web/CController.php(287): ApiController->runAction()
+#3 /Users/dodywicaksono/lab/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#4 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#5 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/dodywicaksono/lab/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/dodywicaksono/lab/niceapns/index.php(13): CWebApplication->run()
+REQUEST_URI=/niceapns/index.php?r=api/create&model=tokens&app_id=be13f88376&secret_key=4ed89c97e4&token=1234859158x
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (93)
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (71)
+in /Users/dodywicaksono/lab/niceapns/index.php (13)
+2012/06/27 11:08:34 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/dodywicaksono/lab/niceapns/protected/models/Token.php:92) (/Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php:93)
+Stack trace:
+#0 /Users/dodywicaksono/lab/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionCreate()
+#1 /Users/dodywicaksono/lab/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/dodywicaksono/lab/yii/framework/web/CController.php(287): ApiController->runAction()
+#3 /Users/dodywicaksono/lab/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#4 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#5 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/dodywicaksono/lab/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/dodywicaksono/lab/niceapns/index.php(13): CWebApplication->run()
+REQUEST_URI=/niceapns/index.php?r=api/create&model=tokens&app_id=be13f88376&secret_key=4ed89c97e4&token=1234859158x
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (93)
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (71)
+in /Users/dodywicaksono/lab/niceapns/index.php (13)
+2012/06/27 11:10:45 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/dodywicaksono/lab/niceapns/protected/models/Token.php:92) (/Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php:93)
+Stack trace:
+#0 /Users/dodywicaksono/lab/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionCreate()
+#1 /Users/dodywicaksono/lab/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/dodywicaksono/lab/yii/framework/web/CController.php(287): ApiController->runAction()
+#3 /Users/dodywicaksono/lab/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#4 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#5 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/dodywicaksono/lab/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/dodywicaksono/lab/niceapns/index.php(13): CWebApplication->run()
+REQUEST_URI=/niceapns/index.php?r=api/create&model=tokens&app_id=be13f88376&secret_key=4ed89c97e4&token=1234859158x
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (93)
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (71)
+in /Users/dodywicaksono/lab/niceapns/index.php (13)
+2012/06/27 11:11:00 [error] [php] Cannot modify header information - headers already sent by (output started at /Users/dodywicaksono/lab/niceapns/protected/models/Token.php:94) (/Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php:93)
+Stack trace:
+#0 /Users/dodywicaksono/lab/yii/framework/web/actions/CInlineAction.php(50): ApiController->actionCreate()
+#1 /Users/dodywicaksono/lab/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /Users/dodywicaksono/lab/yii/framework/web/CController.php(287): ApiController->runAction()
+#3 /Users/dodywicaksono/lab/yii/framework/web/CController.php(266): ApiController->runActionWithFilters()
+#4 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(276): ApiController->run()
+#5 /Users/dodywicaksono/lab/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#6 /Users/dodywicaksono/lab/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /Users/dodywicaksono/lab/niceapns/index.php(13): CWebApplication->run()
+REQUEST_URI=/niceapns/index.php?r=api/create&model=tokens&app_id=be13f88376&secret_key=4ed89c97e4&token=1234859158x
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (93)
+in /Users/dodywicaksono/lab/niceapns/protected/controllers/ApiController.php (71)
+in /Users/dodywicaksono/lab/niceapns/index.php (13)

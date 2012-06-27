@@ -143,4 +143,10 @@ class Project extends CActiveRecord
     	return true;
     }
 
+    public function retrieveProjectId($app_id, $secret_key)
+    {
+    	$theProject = $this->findBySql("select id from project where app_id = '$app_id' and secret_key = '$secret_key'");
+    	return $theProject->id;
+    }
+
 }

@@ -87,4 +87,10 @@ class Token extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public function cekDuplicateToken($project_id, $token)
+	{
+    	$count = $this->countBySql("select count(id) as duplicated from token where project_id = '$project_id' and token = '$token'");
+		return $count;
+	}
 }
