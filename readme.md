@@ -3,10 +3,10 @@
 Sample request:
 
 Register new device token:
-http://localhost/niceapns/index.php?r=api/create&model=tokens&app_id=be13f88376&secret_key=4ed89c97e4&token=12348591581x
+`http://localhost/niceapns/index.php?r=api/create&model=tokens&app_id=be13f88376&secret_key=4ed89c97e4&token=12348591581x`
 
 Broadcast message:
-http://localhost/niceapns/index.php?r=api/broadcast&model=tokens&app_id=be13f88376&secret_key=4ed89c97e4&message=tesmessageforbroadcast
+`http://localhost/niceapns/index.php?r=api/broadcast&model=tokens&app_id=be13f88376&secret_key=4ed89c97e4&message=tesmessageforbroadcast`
 
 
 **SQL**
@@ -39,3 +39,14 @@ CREATE TABLE `token` (
   `created_at` char(10) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+
+![Create new project / app](http://www.dodyrw.com/screen/Screen_Shot_2012-06-27_at_15.41.38-20120627-154437.jpg)
+
+![Manage device tokens](http://www.dodyrw.com/screen/Screen_Shot_2012-06-27_at_15.43.38-20120627-154740.jpg)
+
+**To Do**
+
+* Send broadcast message
+* Send message to single device
+* Cron to send message
+* Cron to check feedback (to remove unused device tokens)
